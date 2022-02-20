@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "reactamplified4b4d31884",
+  "functionName": "reactamplified4b4d31884CustomMessage",
+  "resourceName": "reactamplified4b4d31884CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "/usr/lib/node_modules/@aws-amplify/cli/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "reactamplified4b4d31884CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "arrowhead.link",
+  "EMAILSUBJECT": "Account Confirmed",
+  "EMAILMESSAGE": "Thank you for regestering, you now have access to the site found at:",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}
