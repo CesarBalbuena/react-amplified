@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { ContactUs } from './ui-components';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+
 function App() {
   return (
     <div className="App">
@@ -18,8 +21,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+      <ContactUs />
+      </div>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
