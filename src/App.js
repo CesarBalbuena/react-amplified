@@ -3,8 +3,28 @@ import './App.css';
 
 import { ContactUs } from './ui-components';
 import { withAuthenticator } from '@aws-amplify/ui-react';
+import { useState } from 'react';
+
+
 
 function App() {
+
+  const [firstname, setfirstname] = useState("");
+  const contacotusoverrides = {
+    "Flex.TextField[0]": {
+      onChange: (event) => { setfirstname(event.target.value) }
+    },
+    /* "Flex.Flex[0].Flex[2].TextField[1]": {
+      onChange: (event) => { setLocation(event.target.value) }
+    },
+    "Flex.Flex[0].Flex[2].TextField[2]": {
+      onChange: (event) => { setEmail(event.target.value) }
+    }, */
+    "Flex.Button[0]": {
+      onClick: () => alert(`Saving form ${firstname}`) 
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,7 +42,7 @@ function App() {
         </a>
       </header>
       <div>
-      <ContactUs />
+      <ContactUs overrides={contacotusoverrides}/>
       </div>
     </div>
   );
